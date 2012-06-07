@@ -18,6 +18,28 @@ Or install it yourself as:
 
 ## Usage
 
+    > f = PictureFrame.create
+    > puts f.frame('Hello, World!')
+    +---------------+
+    | Hello, World! |
+    +---------------+
+
+    > f = PictureFrame.create(:stars)
+    > puts f.frame('Hello, World!')
+    *****************
+    * Hello, World! *
+    *****************
+
+    puts PictureFrame.create(:random).frame('Surprise!')
+    ⌜           ⌝
+      Surprise!
+    ⌞           ⌟
+
+    > f = PictureFrame.create("-- * --", :placeholder => '*')
+    > puts f.frame('Just a line')
+    -- Just a line --
+
+### Showcase
 
     > PictureFrame.showcase("Hello, World!")
     :default
@@ -42,9 +64,9 @@ Or install it yourself as:
 
     :ornate
     %=---------------=%
-    ∥                ∥
+    ∥                 ∥
     |  Hello, World!  |
-    ∥                ∥
+    ∥                 ∥
     %=---------------=%
 
     :ephemeral
@@ -89,10 +111,10 @@ Or install it yourself as:
 
     :ornate
     %=-------=%
-    ∥        ∥
+    ∥         ∥
     |  Hello  |
     |  World  |
-    ∥        ∥
+    ∥         ∥
     %=-------=%
 
     :ephemeral
@@ -121,3 +143,8 @@ Or install it yourself as:
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+
+## TODO
+
+* Ensure that multibyte characters work properly
+* Support ANSI colors.

@@ -5,7 +5,7 @@ require 'picture_frame/predefined'
 module PictureFrame
   class << self
 
-    def create(frame_spec = nil)
+    def create(frame_spec = nil, options = {})
       case frame_spec
       when String
         template = frame_spec
@@ -17,7 +17,7 @@ module PictureFrame
         template = Predefined.default
       end
       raise ArgumentError, "No such template: #{frame_spec.inspect}" unless template
-      Frame.new(template)
+      Frame.new(template, options)
     end
 
     def showcase(text)
