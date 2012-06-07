@@ -2,17 +2,26 @@
 
 module PictureFrame
   module Predefined
-    def self.default
-      TEMPLATES[:default]
-    end
 
-    def self.named(name)
-      TEMPLATES[name]
-    end
+    class << self
+      include Enumerable
 
-    def self.random
-      templates = TEMPLATES.values
-      templates[rand(templates.size)]
+      def default
+        TEMPLATES[:default]
+      end
+
+      def named(name)
+        TEMPLATES[name]
+      end
+
+      def random
+        templates = TEMPLATES.values
+        templates[rand(templates.size)]
+      end
+
+      def each(&block)
+        TEMPLATES.keys.each(&block)
+      end
     end
 
     TEMPLATES = {
@@ -36,11 +45,12 @@ module PictureFrame
 # @ #
 #####
 },
-      :baroque   => %q{
+      # FIXME there might be a problem with multibyte chars
+      :ornate    => %q{
 %=---=%
-∥     ∥
+∥    ∥
 |  @  |
-∥     ∥
+∥    ∥
 %=---=%
 },
       :ephemeral => %q{
@@ -48,15 +58,15 @@ module PictureFrame
   @
 ⌞   ⌟
 },
-      :box => %q{
-  +---+
- /   /|
-+---+ |
-|   | |
-| @ | |
-|   | +
-|   |/
-+---+
+      :box       => %q{
+  +-----+
+ /     /|
++-----+ |
+|     | |
+|  @  | |
+|     | +
+|     |/
++-----+
 }
     }.freeze
   end

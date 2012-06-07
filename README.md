@@ -1,6 +1,6 @@
 # PictureFrame
 
-TODO: Write a gem description
+Draw predefined or custom frames around text.
 
 ## Installation
 
@@ -18,7 +18,100 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+    > PictureFrame.show_case("Hello, World!")
+    :default
+    +---------------+
+    | Hello, World! |
+    +---------------+
+
+    :stars
+    *****************
+    * Hello, World! *
+    *****************
+
+    :slashes
+    ///////////////////
+    // Hello, World! //
+    ///////////////////
+
+    :hashes
+    #################
+    # Hello, World! #
+    #################
+
+    :ornate
+    %=---------------=%
+    ∥                ∥
+    |  Hello, World!  |
+    ∥                ∥
+    %=---------------=%
+
+    :ephemeral
+    ⌜               ⌝
+      Hello, World!
+    ⌞               ⌟
+
+    :box
+      +-----------------+
+     /                 /|
+    +-----------------+ |
+    |                 | |
+    |  Hello, World!  | |
+    |                 | +
+    |                 |/
+    +-----------------+
+
+    > PictureFrame.show_case("Hello\nWorld")
+    :default
+    +-------+
+    | Hello |
+    | World |
+    +-------+
+
+    :stars
+    *********
+    * Hello *
+    * World *
+    *********
+
+    :slashes
+    ///////////
+    // Hello //
+    // World //
+    ///////////
+
+    :hashes
+    #########
+    # Hello #
+    # World #
+    #########
+
+    :ornate
+    %=-------=%
+    ∥        ∥
+    |  Hello  |
+    |  World  |
+    ∥        ∥
+    %=-------=%
+
+    :ephemeral
+    ⌜       ⌝
+      Hello
+      World
+    ⌞       ⌟
+
+    :box
+      +---------+
+     /         /|
+    +---------+ |
+    |         | |
+    |  Hello  | |
+    |  World  | |
+    |         | +
+    |         |/
+    +---------+
+
 
 ## Contributing
 
@@ -27,3 +120,4 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
