@@ -20,7 +20,7 @@ module PictureFrame
       Frame.new(template)
     end
 
-    def show_case(text)
+    def showcase(text)
       Predefined.each do |name|
         puts name.inspect
         puts create(name).frame(text)

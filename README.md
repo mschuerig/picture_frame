@@ -19,7 +19,7 @@ Or install it yourself as:
 ## Usage
 
 
-    > PictureFrame.show_case("Hello, World!")
+    > PictureFrame.showcase("Hello, World!")
     :default
     +---------------+
     | Hello, World! |
@@ -62,7 +62,7 @@ Or install it yourself as:
     |                 |/
     +-----------------+
 
-    > PictureFrame.show_case("Hello\nWorld")
+    > PictureFrame.showcase("Hello\nWorld")
     :default
     +-------+
     | Hello |
