@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Draw pretty frames around text.}
   gem.summary       = %q{Draw predefined or custom frames around text.}
   gem.homepage      = "https://github.com/mschuerig/picture_frame"
+  gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

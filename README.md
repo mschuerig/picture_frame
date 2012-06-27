@@ -148,3 +148,4 @@ Or install it yourself as:
 
 * Ensure that multibyte characters work properly
 * Support ANSI colors.
+* Add a commandline tool.
