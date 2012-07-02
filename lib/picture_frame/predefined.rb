@@ -22,6 +22,10 @@ module PictureFrame
       def each(&block)
         TEMPLATES.keys.each(&block)
       end
+
+      def list
+        TEMPLATES.keys.sort
+      end
     end
 
     TEMPLATES = {

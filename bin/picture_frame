@@ -1,0 +1,55 @@
+#! /usr/bin/env ruby
+
+require 'picture_frame'
+require 'optparse'
+
+def main
+  showcase = false
+  style    = :default
+  args     = nil
+
+  OptionParser.new do |opts|
+    opts.banner  = "Usage #{File.basename($0)} [OPTION]... [TEXT]...\n" +
+      "Print framed TEXT, or standard input, to standard output.\n\n"
+
+    opts.version = PictureFrame::VERSION
+
+    opts.on '-s', '--style STYLE', 'Use this frame style' do |s|
+      style = s.to_sym
+    end
+
+    opts.on '-r', '--random', 'Use a random frame style' do
+      style = :random
+    end
+
+    opts.on '-l', '--list', 'List all styles' do
+      puts PictureFrame::Predefined.list
+      exit
+    end
+
+    opts.on '--showcase', 'Show text in all available frame styles' do
+      showcase = true
+    end
+
+    opts.on '-h', '--help', 'Display this help.' do
+      puts opts
+      exit
+    end
+
+    args = opts.parse!(ARGV)
+  end
+
+  text = if args.empty?
+           $stdin.read
+         else
+           args.join(' ')
+         end
+
+  if showcase
+    PictureFrame.showcase(text)
+  else
+    puts PictureFrame.create(style).frame(text)
+  end
+end
+
+main
