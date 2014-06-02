@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'picture_frame/stencil'
 
-class StencilTest < Test::Unit::TestCase
+class StencilTest < Minitest::Test
   def setup
     @corner_stencil = PictureFrame::Stencil.new(
       "abcde\n" +

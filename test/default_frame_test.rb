@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'picture_frame'
 
-class DefaultFrameTest < Test::Unit::TestCase
+class DefaultFrameTest < Minitest::Test
   def setup
     @frame = PictureFrame.create
   end

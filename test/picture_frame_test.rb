@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PictureFrameTest < Test::Unit::TestCase
+class PictureFrameTest < Minitest::Test
   def test_empty_template
     frame = PictureFrame.create('')
     assert_equal '', frame.frame('Hello, World!')

@@ -1,4 +1,4 @@
-  require 'picture_frame/raster'
+require 'picture_frame/raster'
 
 module PictureFrame
   class Stencil < Raster
@@ -8,7 +8,7 @@ module PictureFrame
 
     def position(char)
       @raster.each_with_index do |row, ri|
-        row.chars.with_index do |cell, ci|
+        row.chars.each_with_index do |cell, ci|
           return ri, ci if cell == char
         end
       end

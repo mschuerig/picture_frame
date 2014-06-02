@@ -15,4 +15,6 @@ Gem::Specification.new do |gem|
   gem.name          = "picture_frame"
   gem.require_paths = ["lib"]
   gem.version       = PictureFrame::VERSION
+
+  gem.add_development_dependency 'minitest'
 end

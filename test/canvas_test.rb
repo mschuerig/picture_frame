@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'picture_frame/canvas'
 
-class CanvasTest < Test::Unit::TestCase
+class CanvasTest < Minitest::Test
   def setup
     @canvas = PictureFrame::Canvas.new([3, 4])
 

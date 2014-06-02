@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'picture_frame/raster'
 
-class RasterTest < Test::Unit::TestCase
+class RasterTest < Minitest::Test
   def setup
     @raster = PictureFrame::Raster.new(
       "abcde\n" +
