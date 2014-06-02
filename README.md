@@ -1,9 +1,6 @@
 # PictureFrame
 
-[![Build Status](https://api.travis-ci.org/mschuerig/picture_frame.png?branch=master)](https://api.travis-ci.org/mschuerig/picture_frame)
-
-[![Gem Version](https://badge.fury.io/rb/picture_frame.png)](http://badge.fury.io/rb/picture_frame)
-
+[![Build Status](https://api.travis-ci.org/mschuerig/picture_frame.png?branch=master)](https://api.travis-ci.org/mschuerig/picture_frame) [![Gem Version](https://badge.fury.io/rb/picture_frame.png)](http://badge.fury.io/rb/picture_frame) [![Coverage Status](https://coveralls.io/repos/mschuerig/picture_frame/badge.png)](https://coveralls.io/r/mschuerig/picture_frame)
 
 Draw predefined or custom frames around text.
 

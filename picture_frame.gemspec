@@ -17,4 +17,5 @@ Gem::Specification.new do |gem|
   gem.version       = PictureFrame::VERSION
 
   gem.add_development_dependency 'minitest'
+  gem.add_development_dependency 'coveralls'
 end
